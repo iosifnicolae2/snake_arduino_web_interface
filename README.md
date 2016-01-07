@@ -7,7 +7,7 @@ Install IDE from Arduino <a href="https://www.arduino.cc/en/Main/Software" targe
 Download these libraries 
 <a href="https://github.com/iosifnicolae2/Arduino_Snake/blob/master/Adafruit-GFX-Library-master.zip?raw=true" target="_blank">Adafruit-GFX-Library</a> and 
 <a href="https://github.com/iosifnicolae2/Arduino_Snake/blob/master/Adafruit-PCD8544-Nokia-5110-LCD-library-master.zip?raw=true" target="_blank">Adafruit-PCD8544-Nokia-5110-LCD</a> and install as in image below.
-<img src="https://www.flying-code.com/community/content/images/2015/12/anim-1.gif" tag="FlyingCode Upload Sketch with libraries"/>
+<img src="https://www.flying-code.com/community/content/images/2015/12/anim-1.gif" tag="FlyingCode Upload Sketch with libraries" style="max-width:500px;"/>
 Don't forget to upload sketch from <b>ARDUINO_sketch</b> folder.
 
 2. <h3>Server</h3>
