@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  div#error Something wrong happened. Contact me at iosifnicolae2@gmail.com
+  div#user_details 
+    p#user_name We want to personalize game for our every user!
+  form(name="login", method="post",id="login")
+    input(type="text", name="name", placeholder="John",id="name")
+    input(type="email", name="email", placeholder="john@gmail.com",id="email")
+    div#news
+      input(type="checkbox", name="subscribe", id="subscribe",checked = true,value = true) 
+      div I want to subscribe to your blog posts.(optional)
+    div#sbm
+      input(type="submit", value="Enter", id="login_submit")
+  
+  
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.7/socket.io.min.js')
+  script(src='/javascripts/script_register.js')
+        
+  

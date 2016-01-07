@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  h1= title
+  div#error Something wrong happened. Contact me at iosifnicolae2@gmail.com
+  div#message 
+  div#user_details_index
+    h2#welcome Welcome <b>#{name}</b> and we're glad you're with us!
+    p#score Score: #{score}
+    p#highScore HighScore: #{highScore}
+  div#game_board
+    link(href='https://vjs.zencdn.net/5.4.4/video-js.css', rel='stylesheet')
+    script(src='https://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js')
+    video#live.video-js(controls='', preload='none', width='320',style="float: left;" height='240', data-setup='{}')
+       source(src='rtmp://193.106.127.199:1935/live/test', type='video/rtmp')
+       p.vjs-no-js
+         | To view this video please enable JavaScript, and consider upgrading to a web browser that
+         a(href='https://videojs.com/html5-video-support/', target='_blank') supports HTML5 video
+    script(src='https://vjs.zencdn.net/5.4.4/video.js')
+    #controls
+      button#enter_game Enter Game
+      .row
+        button#top Top
+      .row
+        button#left Left
+        button#right Right
+      .row
+        button#bottom Bottom
+      .row
+        button#space Pause
+      p#instructions You can use keyboard to control snake. Please click out the chat box before press any key.
+      
+  h2#chat Live Chat
+  div#chat
+    ul#messages
+    form(action='')
+      input#m(autocomplete='off')
+      button Send
+
+  //
+    p#instructions.reset If you want to reset my Arduino please press this button.
+        .row
+          button#reset Reset
+        
+  
+  
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/socket.io.js')
+  script(src='/javascripts/script.js')
+  audio#ping
+    source(src="audio/ping.wav", type="audio/wav")
+  audio#start
+    source(src="audio/start.wav", type="audio/wav")
+  script(type='text/javascript').
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5682a0284f923dbb145504c5/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+  p#sorry
+    | I'm sorry about delay of video but i didn't find a solution for this! You can play this stream: rtmp://193.106.127.199:1935/live/test in your player
+
+
+    
+        
+  
